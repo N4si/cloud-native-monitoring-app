@@ -14,6 +14,9 @@
 6. Create Kubernetes Deployments and Services using Python!
 ```
 
+# **Youtube Video for step by step Demonstration!**
+https://youtu.be/kBWCsHEcWnc
+
 ## **Prerequisites** !
 
 (Things to have before starting the projects)
