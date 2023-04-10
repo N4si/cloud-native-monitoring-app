@@ -12,10 +12,11 @@
 4. Create ECR repository using Python Boto3 and pushing Docker Image to ECR
 5. Learn Kubernetes and Create EKS cluster and Nodegroups
 6. Create Kubernetes Deployments and Services using Python!
-```
 
 # **Youtube Video for step by step Demonstration!**
-https://youtu.be/kBWCsHEcWnc
+
+[![Video Tutorial](https://img.youtube.com/vi/kBWCsHEcWnc/0.jpg)](https://youtu.be/kBWCsHEcWnc)
+
 
 ## **Prerequisites** !
 
@@ -36,7 +37,7 @@ https://youtu.be/kBWCsHEcWnc
 Clone the code from the repository:
 
 ```
-$ git clone <repository_url>
+git clone <repository_url>
 ```
 
 ### **Step 2: Install dependencies**
@@ -52,7 +53,7 @@ pip3 install -r requirements.txt
 To run the application, navigate to the root directory of the project and execute the following command:
 
 ```
-$ python3 app.py
+python3 app.py
 ```
 
 This will start the Flask server on **`localhost:5000`**. Navigate to [http://localhost:5000/](http://localhost:5000/) on your browser to access the application.
@@ -93,7 +94,7 @@ CMD ["flask", "run"]
 To build the Docker image, execute the following command:
 
 ```
-$ docker build -t <image_name> .
+docker build -t <image_name> .
 ```
 
 ### **Step 3: Run the Docker container**
@@ -101,7 +102,7 @@ $ docker build -t <image_name> .
 To run the Docker container, execute the following command:
 
 ```
-$ docker run -p 5000:5000 <image_name>
+docker run -p 5000:5000 <image_name>
 ```
 
 This will start the Flask server in a Docker container on **`localhost:5000`**. Navigate to [http://localhost:5000/](http://localhost:5000/) on your browser to access the application.
@@ -132,7 +133,7 @@ print(repository_uri)
 Push the Docker image to ECR using the push commands on the console:
 
 ```
- $ docker push <ecr_repo_uri>:<tag>
+docker push <ecr_repo_uri>:<tag>
 ```
 
 ## **Part 4: Creating an EKS cluster and deploying the app using Python**
@@ -218,4 +219,6 @@ kubectl get pods -n default (to check the pods)
 
 Once your pod is up and running, run the port-forward to expose the service
 
+```bash
 kubectl port-forward service/<service_name> 5000:5000
+```
